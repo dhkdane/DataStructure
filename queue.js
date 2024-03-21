@@ -87,7 +87,22 @@ class Queue {
 const que = new Queue();
 
 let loops = 10;
-for (let i = 0; i < loops; i++) {
+for (let i = loops; i > 0; i--) {
   que.enqueue(i);
 }
-console.log(que.items.length, que.isEmpty());
+console.log(que.printQueue);
+var j = 5;
+function reverseK(queue, k) {
+  for (let i = 0; i < k; i++) {
+    queue.items[i] = queue.items[j];
+    j--;
+    console.log(i, j);
+  }
+
+  console.log(queue.printQueue);
+}
+
+let k = 5;
+reverseK(que, k);
+
+0, 4;
