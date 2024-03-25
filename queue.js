@@ -90,18 +90,16 @@ let loops = 10;
 for (let i = loops; i > 0; i--) {
   que.enqueue(i);
 }
-console.log(que.printQueue);
+//console.log(que.printQueue);
 
-let j = 3;
 let k = 4;
 
 function reverseK(queue, k) {
   for (let i = 0; i < k; i++) {
-    console.log(i, j);
     let x = queue.items[i];
-    queue.items[i] = queue.items[j];
-    queue.items[j] = x;
-    j--;
+    queue.items[i] = queue.items[k];
+    queue.items[k] = x;
+    k--;
   }
 
   console.log(queue.printQueue);
